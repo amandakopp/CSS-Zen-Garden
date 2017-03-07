@@ -1,0 +1,533 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+	
+body { 
+	font-family: 'AzoSans-Regular', sans-serif;
+	line-height: 1.4;
+	color: #000000; 
+	background: #fff;
+	}
+	
+p { 
+	margin-top: 20px;
+	font-size: 1.1em;
+	}
+
+h1 {
+	margin-top: 30px;
+	font-family: 'AzoSans-Regular', sans-serif;
+	font-size: 3em;
+	text-align: right;
+	letter-spacing: 10px;
+	width: calc(100% / 6 * 4);
+	text-transform: uppercase;
+	padding-bottom: 200px;
+	animation: anim1 25s ease infinite alternate;
+	position: relative;
+}
+
+h1:before { 
+	content: ''; 
+	width: 100%; 
+	height: 1vw; 
+	position: relative; 
+	background: #28ac58; 
+	display: block;
+	animation: anim2 5s ease;
+
+}
+
+@keyframes anim2 {
+	0% {
+		left: -100%;
+	}
+	100% {
+		left: 0%;
+	}
+}
+
+@keyframes anim1 {
+	0% {
+		border-color:#28ac58;
+
+	}
+	20% { 
+		border-color:#00a090;
+	}
+	40% {
+		border-color:#00225f;
+	}
+	60% {
+		border-color:#a00821;
+	}
+	80% {
+		border-color:#ca223c;
+	}
+	100% {
+		border-color:#f34e5e;
+	}
+}
+
+h2 {
+	font-size: 0.8em;
+	text-align: right;
+	border-top: #00a090 solid 1vw;
+	letter-spacing: 2px;
+	transform: rotate(-90deg);
+	width: calc(100% / 6 * 3);
+	padding-top: 50px;
+	position: absolute;
+	margin-left: -120px;
+    margin-top: 200px;
+    animation: anim1 15s ease infinite alternate;
+	
+}	
+
+	
+h3 { 
+	font-size: 1.2em;
+	letter-spacing: 2px; 
+	margin-bottom: 20px; 
+	text-transform: uppercase;
+	animation: anim1 15s ease infinite alternate;
+}
+	
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #73787c;
+	transition: all 0.5s ease;
+}
+
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #bdb19b;
+}
+
+a:hover, a:focus, a:active {  
+	animation: anim1 15s ease infinite alternate;
+	transition-property: font-size;
+    font-size: 1.2em;
+}
+	
+@font-face {
+font-family: 'AzoSans-Black';
+src: url("fonts/AzoSans-Black.otf") format("opentype");
+}
+
+@font-face {
+font-family: 'AzoSans-Regular';
+src: url("fonts/AzoSans-Regular.otf") format("opentype");
+}
+
+.page-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.banner {
+	display: flex;
+	flex-direction: row;
+	box-sizing: border-box;
+}
+
+header {
+	padding: 100px 0 200px 0 ;
+}
+
+.summary {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.summary p:first-child {
+	padding-top: 300px;
+	margin-left:calc(100% / 6) ;
+	width: calc(100% / 6 * 3);
+}
+
+.summary p:last-child {
+	border-top: #00225f solid 1vw;
+	margin-top: 100px;
+	padding-top: 20px;
+	width: calc(100% / 6 * 2);
+	margin-left: auto;
+	font-size: 0.8em;
+	animation: anim1 15s ease infinite alternate;
+	
+}
+
+.preamble h3 {
+	width: calc(100% / 6 * 5);
+	border-bottom: #ca223c solid 1vw;
+	padding-bottom: 20px;
+
+}
+	
+.preamble {
+	margin: auto;
+	margin-top: 200px;
+	width: calc(100% / 6 *2);
+}
+
+.preamble p{
+	margin: auto;
+	padding-top: 50px;
+}
+
+.preamble p:first-child{
+	padding-top: 400px;
+	
+}
+
+.explanation {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 100px;
+}
+
+.explanation h3 {
+	width: calc(100% / 6 * 2);
+	padding-top: 100px;
+	border-bottom: #f34e5e solid 1vw;
+	text-align: right;
+	padding-bottom: 20px;
+}
+
+.explanation p {
+	width: calc(100% / 6 * 4);
+	padding-top: 50px;
+	margin: auto;
+}
+
+.participation {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+
+.participation h3 {
+	width: calc(100% / 6 * 4);
+	padding-top: 100px;
+	border-bottom: #29ad57 solid 1vw;
+	text-align: left;
+	padding-bottom: 20px;
+	margin-top: 100px;
+	margin-left: auto;
+
+}
+
+.participation p{
+	width: calc(100% / 6 * 4);
+	margin-left: auto;
+	padding-right: calc(100% / 6 );;
+}
+
+.benefits {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 100px;
+}
+
+.benefits h3 {
+	width: calc(100% / 6 * 2);
+	border-bottom: #00a192 solid 1vw;
+	text-align: right;
+	padding-bottom: 20px;
+	
+}
+
+.benefits p {
+	width: calc(100% / 6 * 3);
+	padding-top: 50px;
+	margin: auto;
+	margin-right: calc(100% / 6 * 2);
+}
+
+.design-selection {
+	display: flex;
+	flex-flow: row wrap;
+	text-align: center;
+	justify-content: center;
+	
+}
+
+navigation {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.requirements {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+
+.requirements h3 {
+	width: calc(100% / 6 * 4);
+	padding-top: 100px;
+	border-bottom: #00235f solid 1vw;
+	text-align: left;
+	padding-bottom: 20px;
+	margin-top: 100px;
+	margin-left: auto;
+
+}
+
+.requirements p{
+	width: calc(100% / 6 * 4);
+	margin-left: auto;
+	padding-right: calc(100% / 6 );;
+}
+
+
+footer {
+	display: flex;
+	flex-direction: row;
+	padding-top: 20px;
+	border-top: #ca223c solid 1vw;
+	width: calc(100% / 6 );
+	margin-top: 100px;
+	font-size: 0.8em;
+}
+
+footer a {
+	padding: 10px;
+}
+
+.design-selection {
+
+}
+
+.design-selection h3 {
+	width: calc(100% / 6 * 4);
+	padding-top: 100px;
+	border-bottom: #f34e5e solid 1vw;
+	text-align: left;
+	padding-bottom: 20px;
+	margin-top: 100px;
+	margin-left: auto;
+	
+}
+
+.design-selection ul{
+	
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	justify-content: center;
+	flex-flow: wrap;
+	padding: 0;
+	width: calc(100% / 6 * 4);
+	margin-left: auto;
+	
+
+}
+
+.design-selection li{
+
+	padding: 20px;
+	margin-top: 10px;
+	flex-basis: calc(100% / 4);
+
+}
+
+.sidebar {
+	font-size: 0.8em;
+}
+
+.sidebar li{
+	list-style: none;
+}
+
+.sidebar .design-selection nav ul li:nth-child(1)::before {
+    content: "1"; 
+    display: flex;
+    justify-content: center;
+    font-size: 5em;
+    color: #28ac58;
+}
+
+.sidebar .design-selection nav ul li:nth-child(2)::before {
+    content: "2";
+    font-size: 5em; 
+    display: flex;
+    justify-content: center;
+    color: #00a090;
+    
+}
+
+.sidebar .design-selection nav ul li:nth-child(3)::before {
+    content: "3";
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    color: #00225f; 
+    
+}
+
+.sidebar .design-selection nav ul li:nth-child(4)::before {
+    content: "4"; 
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    color: #a00821;
+    
+}
+
+.sidebar .design-selection nav ul li:nth-child(5)::before {
+    content: "5"; 
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    color: #ca223c;
+    
+}
+
+.sidebar .design-selection nav ul li:nth-child(6)::before {
+    content: "6"; 
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    color: #f34e5e;
+    
+}
+
+.sidebar .design-selection nav ul li:nth-child(7)::before {
+    content: "7"; 
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    color: #73787c;
+    
+}
+
+.sidebar .design-selection nav ul li:nth-child(8)::before {
+    content: "8";
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    color: #000000; 
+    
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+	padding-top: 20px;
+	border-top: #ca223c solid 1vw;
+	width: calc(100% / 6 );
+	margin-top: 100px;
+	font-size: 0.8em;
+	animation: anim1 15s ease infinite alternate;
+}
+
+.design-archives {
+	display: flex;
+	flex-direction: row;
+	padding-top: 20px;
+	border-top: #73787c solid 1vw;
+	width: calc(100% / 6 );
+	margin-top: 100px;
+}
+
+.zen-resources {
+	display: flex;
+	flex-direction: row;
+	padding-top: 20px;
+	border-top: #000000 solid 1vw;
+	width: calc(100% / 6 );
+	margin-top: 100px;
+}
+
+@media screen and (max-width: 950px) {
+
+h2 {
+	width: calc(100% / 2);
+	font-size: 0.5em;
+	transform: rotate(0deg);
+	margin-left: 0;
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+}
+
+.summary p:first-child {
+    padding-top: 0;
+}
+	
+
+@media screen and (max-width: 600px) {
+	
+h1 {
+	width: calc(100% / 3 * 2);
+	font-size: 2em;
+}
+
+h2 {
+	width: calc(100% / 2);
+	font-size: 0.5em;
+	transform: rotate(0deg);
+	margin-left: 0;
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+    padding-top: 0; 
+}
+	
+.design-selection li{
+	flex-basis: calc(100% / 2);
+
+}
+
+.preamble {
+	width: 90%;
+}
+
+p {
+	width: 90% !important;
+}
+
+.summary p:first-child {
+	margin-left: 10%;
+}
+
+footer {
+	flex-direction: column;
+}
+
+
+}
+
+
+
+
